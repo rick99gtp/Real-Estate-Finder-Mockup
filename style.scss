@@ -1,9 +1,80 @@
+$primaryColor: #edbb5f;
+$secondaryColor: #f2cf8f;
+$accentColor: #f6ddaf;
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-color: black;  // Later, this needs to be a textured dark grey background image -- background: url('');
+}
+
+/* Header Section */
 header {
-    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 90%;
+
+    .logo {
+        flex: .5;
+        padding: 40px;
+
+        h4 {
+            font-family: 'Euphoria Script', cursive;  // Need to find a better font that is closer to the mockup.
+            font-size: 1.75em;
+        }
+    }
+
+    .re-finder {
+        color: $primaryColor;
+    }
+
+    nav {
+        flex: 3;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 7em;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        width: 50%;
+        padding-right: 50px;
+    }
+
+    .nav-link {
+        color: #ddd;
+        text-decoration: none;
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid $primaryColor;
+    }
+
+    li:first-child .nav-link {
+        color: $primaryColor;
+    }
+
+    .language-container {
+        position: relative;
+    }
+
+    .language-container::before {
+        content: '';
+        border-bottom: 2px solid $primaryColor;
+        position: absolute;
+        width: 75%;
+        height: 100%;
+        transform: translateY(-50%);
+        right: 115%;
+    }
+
 }
